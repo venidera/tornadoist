@@ -14,10 +14,10 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-from tprocessmixin import ProcessMixin
+from tornadoist.tprocessmixin import ProcessMixin
 
 try:
-    from tcelerymixin import CeleryMixin
+    from tornadoist.tcelerymixin import CeleryMixin
 except ImportError: # celery not installed, redefine dummy CeleryMixin
     msg = 'celery not installed. CeleryMixin disabled.'
     class CeleryMixin(object):
